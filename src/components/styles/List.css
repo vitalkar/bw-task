@@ -1,0 +1,31 @@
+.container{
+  height: 100%;
+  flex-basis: 20%;
+}
+
+.title{
+  height: 10%;
+  padding-top: 1em;
+  border-bottom: 1px solid black;
+  padding-left: 10px;
+}
+
+.list{
+  list-style-type: none;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 5px 0;
+}
+
+.list::-webkit-scrollbar {
+    width: 1em;
+}
+
+.list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}

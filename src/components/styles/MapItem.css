@@ -1,0 +1,7 @@
+#map{
+  height: 90%;
+}
+
+.map_container{
+  flex-basis: 40%;
+}

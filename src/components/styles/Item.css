@@ -1,0 +1,19 @@
+.item{
+  padding: 15px 10px;
+  color: #0f54c4;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  margin: 3px;
+}
+
+.item:hover{
+  background-color: #0f54c4;
+  color: white;
+}
+
+.selected{
+  background-color: #0f54c4;
+  color: white;
+  font-weight: 600;
+}
