@@ -1,18 +1,20 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../inc/dispatcher';
+import * as clients from '../inc/clients.json';
 
 class DataStore extends EventEmitter {
 
   constructor() {
     super();
-    this.fetchData(); //fetch initial data
     this.current = {
       country: '',
       city: '',
       company: '',
       location: ''
     };
+    this.constructData(clients.Customers); //construct raw data
   }
+
   /**
    * constructs the raw data into items map & locations map
    * @param data: raw data
@@ -22,6 +24,8 @@ class DataStore extends EventEmitter {
     this.items = new Map();
     this.locations = new Map();
     for (var i = 0; i < data.length; i++) {
+      // console.log(i);
+      // console.log(data[i]);
       //if country already exists
       if(this.items.has(data[i].Country)) {
         //if city already exists
@@ -39,6 +43,7 @@ class DataStore extends EventEmitter {
         let value =  new Map().set(data[i].City, [ data[i].CompanyName ]);
         this.items.set(data[i].Country, value);
       }
+
       //set location of company
       this.locations.set(data[i].CompanyName, {
         id: data[i].Id,
@@ -110,32 +115,14 @@ class DataStore extends EventEmitter {
   }
 
   /**
-   * [fetchData description]
-   * @return {[type]} [description]
-   */
-  fetchData(){
-    const req = new Request('/clients.json', {
-      method: 'GET',
-      headers : new Headers({
-        'Content-type': 'application/json'
-      })
-    });
-    fetch(req)
-    .then(res => res.json())
-    .then( items => {
-      this.constructData(items.Customers); //construct raw data
-      this.emit('init');//init application data
-    })
-    .catch( err => console.log(err) );
-  }
-
-
-  /**
    * handle actions recieved from DataActions and emit proper events
    * @param action object whith proper action information
    */
   handleActions(action){
     switch (action.type) {
+      case 'INIT':
+        this.emit('init');
+        break;
       case 'GET_CITIES':
         this.current.country = action.data; // set current country
         this.setInitCityState();

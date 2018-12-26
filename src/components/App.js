@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import DataStore from '../stores/DataStore';
+import  * as DataActions  from '../actions/DataActions';
+
 import List from './List';
 import MapItem from './MapItem';
 import './styles/App.css';
@@ -44,7 +46,8 @@ class App extends Component {
         location: DataStore.getLocation()
       });
     });
-    // initial data
+    // init data
+    DataActions.init();
   }
 
   render() {

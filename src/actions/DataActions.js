@@ -1,5 +1,11 @@
 import dispatcher from '../inc/dispatcher';
 
+export function init(){
+  dispatcher.dispatch({
+    type: 'INIT'
+  });
+}
+
 export function getCities(country){
   dispatcher.dispatch({
     type: 'GET_CITIES',

@@ -20,7 +20,8 @@ class MapItem extends Component {
     .then(res => res.json())
     .then(res => {
        if (res.results.length > 0){
-            this.initMap(res.results[0].geometry.location);
+          const geoCode = res.results[0].geometry.location;
+          this.initMap(geoCode);
        }
     })
     .catch(err => console.log(err));
