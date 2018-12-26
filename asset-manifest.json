@@ -1,13 +1,13 @@
 {
-  "main.css": "/bw-task/static/css/main.9679a790.chunk.css",
-  "main.js": "/bw-task/static/js/main.dda4900d.chunk.js",
-  "main.js.map": "/bw-task/static/js/main.dda4900d.chunk.js.map",
-  "static/js/1.9edf8c20.chunk.js": "/bw-task/static/js/1.9edf8c20.chunk.js",
-  "static/js/1.9edf8c20.chunk.js.map": "/bw-task/static/js/1.9edf8c20.chunk.js.map",
+  "main.css": "/bw-task/static/css/main.963325c3.chunk.css",
+  "main.js": "/bw-task/static/js/main.d31e5e39.chunk.js",
+  "main.js.map": "/bw-task/static/js/main.d31e5e39.chunk.js.map",
+  "static/js/1.927b6f45.chunk.js": "/bw-task/static/js/1.927b6f45.chunk.js",
+  "static/js/1.927b6f45.chunk.js.map": "/bw-task/static/js/1.927b6f45.chunk.js.map",
   "runtime~main.js": "/bw-task/static/js/runtime~main.5b1293e5.js",
   "runtime~main.js.map": "/bw-task/static/js/runtime~main.5b1293e5.js.map",
-  "static/css/main.9679a790.chunk.css.map": "/bw-task/static/css/main.9679a790.chunk.css.map",
+  "static/css/main.963325c3.chunk.css.map": "/bw-task/static/css/main.963325c3.chunk.css.map",
   "index.html": "/bw-task/index.html",
-  "precache-manifest.91940feb45e9f95f7e436c493faf1c9b.js": "/bw-task/precache-manifest.91940feb45e9f95f7e436c493faf1c9b.js",
+  "precache-manifest.5b19034e6482036a8a5544ab2b6d783d.js": "/bw-task/precache-manifest.5b19034e6482036a8a5544ab2b6d783d.js",
   "service-worker.js": "/bw-task/service-worker.js"
 }
